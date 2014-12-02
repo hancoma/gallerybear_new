@@ -37,6 +37,7 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+        PhoneGap.UsePolling=true;
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
@@ -50,11 +51,13 @@ var app = {
          navigator.notification.activityStart("gallerybear", "loading");
 var ref = window.open('http://m.gallerybear.com', '_self', 'location=no');
 ref.addEventListener('loadstart', function(event) { 
+     alert(event.url);
          navigator.notification.activityStart("gallerybear", "loading");
 
    // 링크 주소 확인
    var uuid = device.uuid;
         var link=event.url;
+        alert(link);
         var result=link.indexOf('upload_file.php');
        
         // 파일 업로드 
