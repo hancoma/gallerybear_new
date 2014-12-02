@@ -51,13 +51,11 @@ var app = {
          navigator.notification.activityStart("gallerybear", "loading");
 var ref = window.open('http://m.gallerybear.com', '_self', 'location=no');
 ref.addEventListener('loadstart', function(event) { 
-  
          navigator.notification.activityStart("gallerybear", "loading");
 
    // 링크 주소 확인
    var uuid = device.uuid;
         var link=event.url;
-        alert(link);
         var result=link.indexOf('upload_file.php');
        
         // 파일 업로드 
