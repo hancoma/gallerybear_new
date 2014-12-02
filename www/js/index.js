@@ -51,7 +51,7 @@ var app = {
          navigator.notification.activityStart("gallerybear", "loading");
 var ref = window.open('http://m.gallerybear.com', '_self', 'location=no');
 ref.addEventListener('loadstart', function(event) { 
-     alert(event.url);
+  
          navigator.notification.activityStart("gallerybear", "loading");
 
    // 링크 주소 확인
