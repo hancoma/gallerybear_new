@@ -47,30 +47,7 @@ var app = {
         console.log('Received Event: ' + id);
 
 
-         navigator.notification.activityStart("gallerybear", "loading");
-var ref = window.open('http://m.gallerybear.com', '_blank', 'location=no');
-ref.addEventListener('loadstart', function(event) { 
-         navigator.notification.activityStart("gallerybear", "loading");
-
-   // 링크 주소 확인
-   var uuid = device.uuid;
-        var link=event.url;
-        var result=link.indexOf('upload_file.php');
        
-        // 파일 업로드 
-        if(result>-1) {
-            getImage();
-        }
-
-
-    
-    });
-    ref.addEventListener('loadstop', function(event) { 
-        navigator.notification.activityStop();
-        
-    
-    });
-
 
 
 
